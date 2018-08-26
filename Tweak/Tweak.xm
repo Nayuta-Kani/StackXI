@@ -559,7 +559,7 @@ static void fakeNotifications() {
 - (void)_handleTapOnView:(id)arg1 {
     NSLog(@"[StackXI] tap");
     
-    if (self.notificationRequest.sxiIsStack && !self.notificationRequest.sxiIsExpanded) {
+    if (self.notificationRequest.sxiIsStack && !self.notificationRequest.sxiIsExpanded && [self numberOfItemsInSection:0] > 1) {
         [UIView animateWithDuration:TEMPDURATION animations:^{
             self.sxiNotificationCount.alpha = 0;
         }];
