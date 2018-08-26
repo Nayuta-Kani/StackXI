@@ -367,8 +367,7 @@ static void fakeNotifications() {
                 return CGSizeMake(orig.width,1);
             }
         }
-
-        if (request.sxiIsStack && !request.sxiIsExpanded && [self.notificationRequest.sxiStackedNotificationRequests count] > 1) {
+	if (request.sxiIsStack && !request.sxiIsExpanded && [request.sxiStackedNotificationRequests count] > 0) {
             return CGSizeMake(orig.width,orig.height + 15);
         }
     }
@@ -559,7 +558,7 @@ static void fakeNotifications() {
 - (void)_handleTapOnView:(id)arg1 {
     NSLog(@"[StackXI] tap");
     
-    if (self.notificationRequest.sxiIsStack && !self.notificationRequest.sxiIsExpanded && [self.notificationPriorityList.numberOfItemsInSection:0] > 1) {
+    if (self.notificationRequest.sxiIsStack && !self.notificationRequest.sxiIsExpanded && [self.notificationRequest.sxiStackedNotificationRequests count] > 1) {
         [UIView animateWithDuration:TEMPDURATION animations:^{
             self.sxiNotificationCount.alpha = 0;
         }];
