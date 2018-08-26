@@ -368,7 +368,7 @@ static void fakeNotifications() {
             }
         }
 
-        if (request.sxiIsStack && !request.sxiIsExpanded && [request.sxiStackedNotificationRequests count] > 0) {
+        if (request.sxiIsStack && !request.sxiIsExpanded && [self.notificationRequest.sxiStackedNotificationRequests count] > 1) {
             return CGSizeMake(orig.width,orig.height + 15);
         }
     }
