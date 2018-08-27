@@ -70,7 +70,7 @@ static void fakeNotifications() {
   if (bbServer == self) {
     bbServer = nil;
   }
-  
+
   %orig;
 }
 %end
@@ -119,7 +119,7 @@ static void fakeNotifications() {
     for (NCNotificationRequest *request in self.sxiStackedNotificationRequests) {
         request.sxiVisible = true;
     }
-    
+
     [listCollectionView sxiExpand:self.bulletin.sectionID];
 }
 
@@ -131,7 +131,7 @@ static void fakeNotifications() {
     for (NCNotificationRequest *request in self.sxiStackedNotificationRequests) {
         request.sxiVisible = false;
     }
-    
+
     [listCollectionView sxiCollapse:self.bulletin.sectionID];
 }
 
@@ -335,10 +335,10 @@ static void fakeNotifications() {
     }
 
     NCNotificationListCell* cell = %orig;
-    
+
     if (!cell.contentViewController.notificationRequest.sxiVisible) {
         if (cell.contentViewController.notificationRequest.sxiPositionInStack > 3) {
-            cell.hidden = YES; 
+            cell.hidden = YES;
         } else {
             cell.hidden = NO;
             if (cell.frame.size.height != 50) {
@@ -348,7 +348,7 @@ static void fakeNotifications() {
     } else {
         cell.hidden = NO;
     }
-    
+
     return cell;
 }
 
@@ -400,7 +400,7 @@ static void fakeNotifications() {
         for (NCNotificationRequest *request in self.contentViewController.notificationRequest.sxiStackedNotificationRequests) {
             [request.clearAction.actionRunner executeAction:request.clearAction fromOrigin:self withParameters:nil completion:nil];
         }
-        
+
         [self.contentViewController.notificationRequest.clearAction.actionRunner executeAction:self.contentViewController.notificationRequest.clearAction fromOrigin:self withParameters:nil completion:nil];
         return;
     }
@@ -450,7 +450,7 @@ static void fakeNotifications() {
     for (NCNotificationRequest *request in self.notificationRequest.sxiStackedNotificationRequests) {
         [request.clearAction.actionRunner executeAction:request.clearAction fromOrigin:self withParameters:nil completion:nil];
     }
-    
+
     [self.notificationRequest.clearAction.actionRunner executeAction:self.notificationRequest.clearAction fromOrigin:self withParameters:nil completion:nil];
     [listCollectionView reloadData];
 }
@@ -468,7 +468,7 @@ static void fakeNotifications() {
         [self.view addSubview:self.sxiNotificationCount];
 
         if (showButtons) {
-            self.sxiClearAllButton = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.origin.x + self.view.frame.size.width - 165, self.view.frame.origin.y + 5, 75, 25)];
+            self.sxiClearAllButton = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.origin.x + self.view.frame.size.width - 165, self.view.frame.origin.y - 25, 75, 25)]; //changed (orig: + 5)
             [self.sxiClearAllButton.titleLabel setFont:[UIFont systemFontOfSize:12]];
             self.sxiClearAllButton.hidden = YES;
             self.sxiClearAllButton.alpha = 0.0;
@@ -478,7 +478,7 @@ static void fakeNotifications() {
             self.sxiClearAllButton.layer.masksToBounds = true;
             self.sxiClearAllButton.layer.cornerRadius = 12.5;
 
-            self.sxiCollapseButton = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.origin.x + self.view.frame.size.width - 80, self.view.frame.origin.y + 5, 75, 25)];
+            self.sxiCollapseButton = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.origin.x + self.view.frame.size.width - 80, self.view.frame.origin.y - 25, 75, 25)]; //changed (orig: + 5)
             [self.sxiCollapseButton.titleLabel setFont:[UIFont systemFontOfSize:12]];
             self.sxiCollapseButton.hidden = YES;
             self.sxiCollapseButton.alpha = 0.0;
@@ -487,10 +487,10 @@ static void fakeNotifications() {
             [self.sxiCollapseButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
             self.sxiCollapseButton.layer.masksToBounds = true;
             self.sxiCollapseButton.layer.cornerRadius = 12.5;
-            
+
             [self.sxiClearAllButton addTarget:self action:@selector(sxiClearAll:) forControlEvents:UIControlEventTouchUpInside];
             [self.sxiCollapseButton addTarget:self action:@selector(sxiCollapse:) forControlEvents:UIControlEventTouchUpInside];
-            
+
             [self.view addSubview:self.sxiClearAllButton];
             [self.view addSubview:self.sxiCollapseButton];
         }
@@ -557,7 +557,7 @@ static void fakeNotifications() {
 
 - (void)_handleTapOnView:(id)arg1 {
     NSLog(@"[StackXI] tap");
-    
+
     if (self.notificationRequest.sxiIsStack && !self.notificationRequest.sxiIsExpanded && [self.notificationRequest.sxiStackedNotificationRequests count] > 0) {
         [UIView animateWithDuration:TEMPDURATION animations:^{
             self.sxiNotificationCount.alpha = 0;
@@ -624,7 +624,7 @@ static void fakeNotifications() {
             [sectionIDs addObject:request.bulletin.sectionID];
         }
     }
-    
+
     [listCollectionView reloadData];
 
     CGRect frame = CGRectMake(0,0,0,0);
