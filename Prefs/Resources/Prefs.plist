@@ -99,7 +99,7 @@
 			<key>cellClass</key>
 			<string>HBLinkTableCell</string>
 			<key>label</key>
-			<string>Github</string>
+			<string>Original StackXI Github</string>
 			<key>subtitle</key>
 			<string>Original Source code</string>
 			<key>url</key>
@@ -109,7 +109,7 @@
 			<key>cellClass</key>
 			<string>HBLinkTableCell</string>
 			<key>label</key>
-			<string>Github</string>
+			<string>Screwed up StackXI Github</string>
 			<key>subtitle</key>
 			<string>Nayu's Fork</string>
 			<key>url</key>
