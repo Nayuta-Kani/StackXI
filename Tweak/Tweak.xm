@@ -367,7 +367,7 @@ static void fakeNotifications() {
                 return CGSizeMake(orig.width,1);
             }
         }
-	if (request.sxiIsStack && !request.sxiIsExpanded && [request.sxiStackedNotificationRequests count] > 0) {
+	if (request.sxiIsStack && [request.sxiStackedNotificationRequests count] > 0) { // removed && !request.sxiIsExpanded 
             return CGSizeMake(orig.width,orig.height + 15);
         }
     }
