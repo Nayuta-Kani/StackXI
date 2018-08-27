@@ -468,23 +468,23 @@ static void fakeNotifications() {
         [self.view addSubview:self.sxiNotificationCount];
 
         if (showButtons) {
-            self.sxiClearAllButton = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.origin.x + self.view.frame.size.width - 215, self.view.frame.origin.y + 5, 75, 25)];
+            self.sxiClearAllButton = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.origin.x + self.view.frame.size.width - 165, self.view.frame.origin.y + self.view.frame.size.height, 75, 25)];
             [self.sxiClearAllButton.titleLabel setFont:[UIFont systemFontOfSize:12]];
             self.sxiClearAllButton.hidden = YES;
             self.sxiClearAllButton.alpha = 0.0;
             [self.sxiClearAllButton setTitle:@"Clear All" forState: UIControlStateNormal];
-            self.sxiClearAllButton.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.6];
-            [self.sxiClearAllButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+            self.sxiClearAllButton.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.3];
+            [self.sxiClearAllButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
             self.sxiClearAllButton.layer.masksToBounds = true;
             self.sxiClearAllButton.layer.cornerRadius = 12.5;
 
-            self.sxiCollapseButton = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.origin.x + self.view.frame.size.width - 130, self.view.frame.origin.y + 5, 75, 25)];
+            self.sxiCollapseButton = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.origin.x + self.view.frame.size.width - 80, self.view.frame.origin.y + self.view.frame.size.height, 75, 25)];
             [self.sxiCollapseButton.titleLabel setFont:[UIFont systemFontOfSize:12]];
             self.sxiCollapseButton.hidden = YES;
             self.sxiCollapseButton.alpha = 0.0;
             [self.sxiCollapseButton setTitle:@"Collapse" forState:UIControlStateNormal];
-            self.sxiCollapseButton.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.6];
-            [self.sxiCollapseButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+            self.sxiCollapseButton.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.3];
+            [self.sxiCollapseButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
             self.sxiCollapseButton.layer.masksToBounds = true;
             self.sxiCollapseButton.layer.cornerRadius = 12.5;
 
@@ -522,8 +522,8 @@ static void fakeNotifications() {
     self.sxiNotificationCount.alpha = 0.0;
 
     if (showButtons) {
-        self.sxiClearAllButton.frame = CGRectMake(self.view.frame.origin.x + self.view.frame.size.width - 215, self.view.frame.origin.y + 5, 75, 25);
-        self.sxiCollapseButton.frame = CGRectMake(self.view.frame.origin.x + self.view.frame.size.width - 130, self.view.frame.origin.y + 5, 75, 25);
+        self.sxiClearAllButton.frame = CGRectMake(self.view.frame.origin.x + self.view.frame.size.width - 165, self.view.frame.origin.y + self.view.frame.size.height, 75, 25);
+        self.sxiCollapseButton.frame = CGRectMake(self.view.frame.origin.x + self.view.frame.size.width - 80, self.view.frame.origin.y + self.view.frame.size.height, 75, 25);
 
         self.sxiClearAllButton.hidden = YES;
         self.sxiClearAllButton.alpha = 0.0;
