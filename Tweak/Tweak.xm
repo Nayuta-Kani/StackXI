@@ -468,7 +468,7 @@ static void fakeNotifications() {
         [self.view addSubview:self.sxiNotificationCount];
 
         if (showButtons) {
-            self.sxiClearAllButton = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.origin.x + self.view.frame.size.width - 145, self.view.frame.origin.y + self.view.frame.size.height - 27, 65, 25)];
+            self.sxiClearAllButton = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.origin.x + self.view.frame.size.width - 155, self.view.frame.origin.y + self.view.frame.size.height - 27, 75, 25)];
             [self.sxiClearAllButton.titleLabel setFont:[UIFont systemFontOfSize:12]];
             self.sxiClearAllButton.hidden = YES;
             self.sxiClearAllButton.alpha = 0.0;
@@ -478,7 +478,7 @@ static void fakeNotifications() {
             self.sxiClearAllButton.layer.masksToBounds = true;
             self.sxiClearAllButton.layer.cornerRadius = 12.5;
 
-            self.sxiCollapseButton = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.origin.x + self.view.frame.size.width - 80, self.view.frame.origin.y + self.view.frame.size.height - 27, 65, 25)];
+            self.sxiCollapseButton = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.origin.x + self.view.frame.size.width - 80, self.view.frame.origin.y + self.view.frame.size.height - 27, 75, 25)];
             [self.sxiCollapseButton.titleLabel setFont:[UIFont systemFontOfSize:12]];
             self.sxiCollapseButton.hidden = YES;
             self.sxiCollapseButton.alpha = 0.0;
@@ -522,8 +522,8 @@ static void fakeNotifications() {
     self.sxiNotificationCount.alpha = 0.0;
 
     if (showButtons) {
-        self.sxiClearAllButton.frame = CGRectMake(self.view.frame.origin.x + self.view.frame.size.width - 145, self.view.frame.origin.y + self.view.frame.size.height - 27, 65, 25);
-        self.sxiCollapseButton.frame = CGRectMake(self.view.frame.origin.x + self.view.frame.size.width - 80, self.view.frame.origin.y + self.view.frame.size.height - 27, 65, 25);
+        self.sxiClearAllButton.frame = CGRectMake(self.view.frame.origin.x + self.view.frame.size.width - 155, self.view.frame.origin.y + self.view.frame.size.height - 27, 75, 25);
+        self.sxiCollapseButton.frame = CGRectMake(self.view.frame.origin.x + self.view.frame.size.width - 80, self.view.frame.origin.y + self.view.frame.size.height - 27, 75, 25);
 
         self.sxiClearAllButton.hidden = YES;
         self.sxiClearAllButton.alpha = 0.0;
