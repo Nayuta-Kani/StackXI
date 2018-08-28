@@ -58,8 +58,8 @@
       </array>
       <key>Values</key>
       <array>
-          <string>white</string>
-          <string>black</string>
+          <string>0</string>
+          <string>1</string>
       </array>
 			<key>alternateColors</key>
 			<true/>
