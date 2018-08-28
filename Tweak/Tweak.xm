@@ -11,7 +11,7 @@ static NCNotificationPriorityList *priorityList = nil;
 static NCNotificationListCollectionView *listCollectionView = nil;
 static NCNotificationCombinedListViewController *clvc = nil;
 static bool showButtons = false;
-static NSString* buttonTextColor = "white";
+static NSString* buttonTextColor = @"white";
 
 UIImage * imageWithView(UIView *view) {
     UIGraphicsBeginImageContextWithOptions(view.bounds.size, view.opaque, 0.0);
@@ -475,10 +475,10 @@ static void fakeNotifications() {
             self.sxiClearAllButton.alpha = 0.0;
             [self.sxiClearAllButton setTitle:@"Clear All" forState: UIControlStateNormal];
             self.sxiClearAllButton.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.0];
-            if(NSString* buttonTextColor == "white"){
+            if(NSString* buttonTextColor = @"white"){
               [self.sxiClearAllButton setTitleColor:[[UIColor whiteColor] colorWithAlphaComponent:0.7] forState:UIControlStateNormal];
             }
-            else if(NSString* buttonTextColor == "black"){
+            else if(NSString* buttonTextColor = @"black"){
               [self.sxiClearAllButton setTitleColor:[[UIColor blackColor] colorWithAlphaComponent:0.7] forState:UIControlStateNormal];
             }
             self.sxiClearAllButton.layer.masksToBounds = true;
@@ -731,7 +731,7 @@ static void displayStatusChanged(CFNotificationCenterRef center, void *observer,
     HBPreferences *file = [[HBPreferences alloc] initWithIdentifier:@"io.ominousness.stackxi"];
     bool enabled = [([file objectForKey:@"Enabled"] ?: @(YES)) boolValue];
     showButtons = [([file objectForKey:@"ShowButtons"] ?: @(NO)) boolValue];
-    NSString* buttonTextColor = [([file objectForKey:@"buttonTextColor"] ?: @("white")) NSString*];
+    NSString* buttonTextColor = [([file objectForKey:@"buttonTextColor"] ?: @("white")) NSString];
     bool debug = [([file objectForKey:@"debugmode"] ?: @(NO)) boolValue];;
 
     if (enabled) {
