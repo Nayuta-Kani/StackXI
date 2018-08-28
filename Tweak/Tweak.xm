@@ -12,7 +12,6 @@ static NCNotificationListCollectionView *listCollectionView = nil;
 static NCNotificationCombinedListViewController *clvc = nil;
 static bool showButtons = false;
 static NSUInteger buttonTextColor = 0;
-static NSUInteger defaultTextColor = 0;
 
 UIImage * imageWithView(UIView *view) {
     UIGraphicsBeginImageContextWithOptions(view.bounds.size, view.opaque, 0.0);
