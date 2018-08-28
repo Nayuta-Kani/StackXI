@@ -11,7 +11,7 @@ static NCNotificationPriorityList *priorityList = nil;
 static NCNotificationListCollectionView *listCollectionView = nil;
 static NCNotificationCombinedListViewController *clvc = nil;
 static bool showButtons = false;
-static NSUInteger buttonTextColor = 0;
+static NSInteger buttonTextColor = 0;
 
 UIImage * imageWithView(UIView *view) {
     UIGraphicsBeginImageContextWithOptions(view.bounds.size, view.opaque, 0.0);
@@ -731,7 +731,7 @@ static void displayStatusChanged(CFNotificationCenterRef center, void *observer,
     HBPreferences *file = [[HBPreferences alloc] initWithIdentifier:@"io.ominousness.stackxi"];
     bool enabled = [([file objectForKey:@"Enabled"] ?: @(YES)) boolValue];
     showButtons = [([file objectForKey:@"ShowButtons"] ?: @(NO)) boolValue];
-    buttonTextColor = [([file integerForKey:@"buttonTextColor"]) NSUInteger];
+    buttonTextColor = [([file integerForKey:@"buttonTextColor"] ?: @("0")) integerValue];
     bool debug = [([file objectForKey:@"debugmode"] ?: @(NO)) boolValue];;
 
     if (enabled) {
