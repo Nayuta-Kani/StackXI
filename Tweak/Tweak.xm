@@ -367,7 +367,7 @@ static void fakeNotifications() {
                 return CGSizeMake(orig.width,1);
             }
         }
-	      if (request.sxiIsStack && [request.sxiStackedNotificationRequests count] > 0) { // removed && !request.sxiIsExpanded
+	if (request.sxiIsStack && [request.sxiStackedNotificationRequests count] > 0) { // removed && !request.sxiIsExpanded
             return CGSizeMake(orig.width,orig.height + 15);
         }
     }
@@ -407,14 +407,6 @@ static void fakeNotifications() {
 
     %orig;
 }
-/*Nayu Stuff */
--(id)initWithFrame:(CGRect)arg1 {
-    //if (self.contentViewController.notificationRequest.sxiIsStack && self.contentViewController.notificationRequest.sxiIsExpanded) {
-    //    return %orig(CGRectMake(arg1.origin.x, arg1.origin.y + 75, arg1.size.width, arg1.size.height));
-    //}
-    return %orig(CGRectMake(arg1.origin.x, arg1.origin.y + 75, arg1.size.width, arg1.size.height));
-}
-/* End Nayu */
 
 %end
 
@@ -571,7 +563,6 @@ static void fakeNotifications() {
             self.sxiNotificationCount.alpha = 0;
         }];
         [self.notificationRequest sxiExpand];
-
         return;
     }
 
@@ -626,9 +617,7 @@ static void fakeNotifications() {
     [sectionIDs addObject:sectionID];
 
     for (NCNotificationRequest *request in priorityList.requests) {
-        if (!request.bulletin.sectionID){
-          continue;
-        }
+        if (!request.bulletin.sectionID) continue;
 
         if (![sectionIDs containsObject:request.bulletin.sectionID] && request.sxiIsStack && request.sxiIsExpanded) {
             [request sxiCollapse];
