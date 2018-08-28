@@ -412,7 +412,7 @@ static void fakeNotifications() {
     //if (self.contentViewController.notificationRequest.sxiIsStack && self.contentViewController.notificationRequest.sxiIsExpanded) {
     //    return %orig(CGRectMake(arg1.origin.x, arg1.origin.y + 75, arg1.size.width, arg1.size.height));
     //}
-    return %orig(CGRectMake(arg1.origin.x, arg1.origin.y, arg1.size.width, arg1.size.height));
+    return %orig(CGRectMake(arg1.origin.x, arg1.origin.y + 75, arg1.size.width, arg1.size.height));
 }
 /* End Nayu */
 
