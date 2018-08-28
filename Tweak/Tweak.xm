@@ -613,16 +613,18 @@ static void fakeNotifications() {
 
 %new
 -(void)sxiExpand:(NSString *)sectionID {
-    /* From here on I'm trying out some weird stuff -nayu */
-    CGRect topnotif = self.frame;
-    topnotif.origin.y = topnotif.origin.y + 75;
-    self.frame = topnotif;
-    /* okay weird stuff over */
     NSMutableOrderedSet *sectionIDs = [[NSMutableOrderedSet alloc] initWithCapacity:100];
     [sectionIDs addObject:sectionID];
 
     for (NCNotificationRequest *request in priorityList.requests) {
-        if (!request.bulletin.sectionID) continue;
+        if (!request.bulletin.sectionID){
+          /* From here on I'm trying out some weird stuff -nayu */
+          CGRect topnotif = request.frame;
+          topnotif.origin.y = topnotif.origin.y + 75;
+          request.frame = topnotif;
+          /* okay weird stuff over */
+          continue;
+        }
 
         if (![sectionIDs containsObject:request.bulletin.sectionID] && request.sxiIsStack && request.sxiIsExpanded) {
             [request sxiCollapse];
