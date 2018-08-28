@@ -410,11 +410,9 @@ static void fakeNotifications() {
 /*Nayu Stuff */
 -(id)initWithFrame:(CGRect)arg1 {
     if (self.contentViewController.notificationRequest.sxiIsStack && self.contentViewController.notificationRequest.sxiIsExpanded) {
-        CGRect topnotif = self.frame;
-        topnotif.origin.y = topnotif.origin.y + 75;
-        self.frame = topnotif;
+        return %orig(CGRectMake(arg1.origin.x, arg1.origin.y + 75, arg1.size.width, arg1.size.height));
     }
-    return %orig;
+    else return %orig(CGRectMake(arg1.origin.x, arg1.origin.y, arg1.size.width, arg1.size.height));
 }
 /* End Nayu */
 
