@@ -367,7 +367,7 @@ static void fakeNotifications() {
                 return CGSizeMake(orig.width,1);
             }
         }
-	if (request.sxiIsStack && [request.sxiStackedNotificationRequests count] > 0) { // removed && !request.sxiIsExpanded
+	      if (request.sxiIsStack && [request.sxiStackedNotificationRequests count] > 0) { // removed && !request.sxiIsExpanded
             return CGSizeMake(orig.width,orig.height + 15);
         }
     }
@@ -407,6 +407,17 @@ static void fakeNotifications() {
 
     %orig;
 }
+/*Nayu Stuff */
+-(id)initWithFrame:(CGRect)arg1 {
+    if (self.contentViewController.notificationRequest.sxiIsStack && self.contentViewController.notificationRequest.sxiIsExpanded) {
+        CGRect topnotif = self.frame;
+        topnotif.origin.y = topnotif.origin.y + 75;
+        self.frame = topnotif;
+        return;
+    }
+    %orig;
+}
+/* End Nayu */
 
 %end
 
@@ -564,11 +575,6 @@ static void fakeNotifications() {
         }];
         [self.notificationRequest sxiExpand];
 
-        /* From here on I'm trying out some weird stuff -nayu */
-        CGRect topnotif = self.frame;
-        topnotif.origin.y = topnotif.origin.y + 75;
-        self.frame = topnotif;
-        /* okay weird stuff over */
         return;
     }
 
