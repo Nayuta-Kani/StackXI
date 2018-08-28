@@ -11,7 +11,7 @@ static NCNotificationPriorityList *priorityList = nil;
 static NCNotificationListCollectionView *listCollectionView = nil;
 static NCNotificationCombinedListViewController *clvc = nil;
 static bool showButtons = false;
-static NSUInteger* buttonTextColor = 0;
+static NSUInteger buttonTextColor = 0;
 
 UIImage * imageWithView(UIView *view) {
     UIGraphicsBeginImageContextWithOptions(view.bounds.size, view.opaque, 0.0);
@@ -475,10 +475,10 @@ static void fakeNotifications() {
             self.sxiClearAllButton.alpha = 0.0;
             [self.sxiClearAllButton setTitle:@"Clear All" forState: UIControlStateNormal];
             self.sxiClearAllButton.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.0];
-            if(buttonTextColor == 0){
+            if(*buttonTextColor == 0){
               [self.sxiClearAllButton setTitleColor:[[UIColor whiteColor] colorWithAlphaComponent:0.7] forState:UIControlStateNormal];
             }
-            else if(buttonTextColor == 1){
+            else if(*buttonTextColor == 1){
               [self.sxiClearAllButton setTitleColor:[[UIColor blackColor] colorWithAlphaComponent:0.7] forState:UIControlStateNormal];
             }
             self.sxiClearAllButton.layer.masksToBounds = true;
@@ -490,10 +490,10 @@ static void fakeNotifications() {
             self.sxiCollapseButton.alpha = 0.0;
             [self.sxiCollapseButton setTitle:@"Collapse" forState:UIControlStateNormal];
             self.sxiCollapseButton.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.0];
-            if(buttonTextColor == 0){
+            if(*buttonTextColor == 0){
               [self.sxiCollapseButton setTitleColor:[[UIColor whiteColor] colorWithAlphaComponent:0.7] forState:UIControlStateNormal];
             }
-            else if(buttonTextColor == 1){
+            else if(*buttonTextColor == 1){
               [self.sxiCollapseButton setTitleColor:[[UIColor blackColor] colorWithAlphaComponent:0.7] forState:UIControlStateNormal];
             }
             self.sxiCollapseButton.layer.masksToBounds = true;
