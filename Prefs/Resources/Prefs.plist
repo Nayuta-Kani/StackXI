@@ -42,6 +42,30 @@
 		</dict>
 		<dict>
 			<key>cell</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>io.ominousness.stackxi</string>
+			<key>label</key>
+			<string>Text color for "Collapse" / "Clear All" buttons</string>
+			<key>key</key>
+			<string>buttonTextColor</string>
+			<key>Titles</key>
+			<array>
+          <string>White</string>
+          <string>Black</string>
+      </array>
+      <key>Values</key>
+      <array>
+          <string>white</string>
+          <string>black</string>
+      </array>
+			<key>alternateColors</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>cell</key>
 			<string>PSSwitchCell</string>
 			<key>default</key>
 			<false/>
