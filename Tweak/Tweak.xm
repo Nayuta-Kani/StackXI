@@ -619,9 +619,9 @@ static void fakeNotifications() {
     for (NCNotificationRequest *request in priorityList.requests) {
         if (!request.bulletin.sectionID){
           /* From here on I'm trying out some weird stuff -nayu */
-          CGRect topnotif = request.frame;
+          CGRect topnotif = self.frame;
           topnotif.origin.y = topnotif.origin.y + 75;
-          request.frame = topnotif;
+          self.frame = topnotif;
           /* okay weird stuff over */
           continue;
         }
