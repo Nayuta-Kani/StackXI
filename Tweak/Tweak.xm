@@ -563,6 +563,12 @@ static void fakeNotifications() {
             self.sxiNotificationCount.alpha = 0;
         }];
         [self.notificationRequest sxiExpand];
+
+        /* From here on I'm trying out some weird stuff -nayu */
+        CGRect topnotif = self.frame;
+        topnotif.origin.y = topnotif.origin.y + 75;
+        self.frame = topnotif;
+        /* okay weird stuff over */
         return;
     }
 
@@ -618,11 +624,6 @@ static void fakeNotifications() {
 
     for (NCNotificationRequest *request in priorityList.requests) {
         if (!request.bulletin.sectionID){
-          /* From here on I'm trying out some weird stuff -nayu */
-          CGRect topnotif = self.frame;
-          topnotif.origin.y = topnotif.origin.y + 75;
-          self.frame = topnotif;
-          /* okay weird stuff over */
           continue;
         }
 
