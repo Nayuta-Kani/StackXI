@@ -732,7 +732,7 @@ static void displayStatusChanged(CFNotificationCenterRef center, void *observer,
     HBPreferences *file = [[HBPreferences alloc] initWithIdentifier:@"io.ominousness.stackxi"];
     bool enabled = [([file objectForKey:@"Enabled"] ?: @(YES)) boolValue];
     showButtons = [([file objectForKey:@"ShowButtons"] ?: @(NO)) boolValue];
-    buttonTextColor = [([file unsignedIntegerForKey:@"buttonTextColor"] ?: *defaultTextColor) unsignedIntegerValue];
+    buttonTextColor = [([file unsignedIntegerForKey:@"buttonTextColor"] ?: [NSUInteger defaultTextColor]) unsignedIntegerValue];
     bool debug = [([file objectForKey:@"debugmode"] ?: @(NO)) boolValue];;
 
     if (enabled) {
