@@ -413,7 +413,7 @@ static void fakeNotifications() {
         CGRect topnotif = self.frame;
         topnotif.origin.y = topnotif.origin.y + 75;
         self.frame = topnotif;
-        return self.frame;
+        return %orig;
     }
     %orig;
 }
