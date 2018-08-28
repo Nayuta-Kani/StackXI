@@ -42,7 +42,7 @@
 		</dict>
 		<dict>
 			<key>cell</key>
-			<string>PSMultiValueSpecifier</string>
+			<string>PSSegmentCell</string>
 			<key>default</key>
 			<false/>
 			<key>defaults</key>
@@ -58,8 +58,8 @@
       </array>
       <key>Values</key>
       <array>
-          <string>0</string>
-          <string>1</string>
+				<integer>0</integer>
+				<integer>1</integer>
       </array>
 			<key>alternateColors</key>
 			<true/>
