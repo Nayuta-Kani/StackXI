@@ -42,25 +42,15 @@
 		</dict>
 		<dict>
 			<key>cell</key>
-			<string>PSSegmentCell</string>
+			<string>PSSwitchCell</string>
 			<key>default</key>
 			<false/>
 			<key>defaults</key>
 			<string>io.ominousness.stackxi</string>
 			<key>label</key>
-			<string>Text color for "Collapse" / "Clear All" buttons</string>
+			<string>Black Text color for "Collapse" / "Clear All" buttons</string>
 			<key>key</key>
 			<string>buttonTextColor</string>
-			<key>Titles</key>
-			<array>
-          <string>White</string>
-          <string>Black</string>
-      </array>
-      <key>Values</key>
-      <array>
-				<integer>0</integer>
-				<integer>1</integer>
-      </array>
 			<key>alternateColors</key>
 			<true/>
 		</dict>
