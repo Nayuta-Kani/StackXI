@@ -613,6 +613,11 @@ static void fakeNotifications() {
 
 %new
 -(void)sxiExpand:(NSString *)sectionID {
+    /* From here on I'm trying out some weird stuff -nayu */
+    CGRect topnotif = self.frame;
+    topnotif.origin.y = topnotif.origin.y + 75;
+    self.frame = topnotif;
+    /* okay weird stuff over */
     NSMutableOrderedSet *sectionIDs = [[NSMutableOrderedSet alloc] initWithCapacity:100];
     [sectionIDs addObject:sectionID];
 
