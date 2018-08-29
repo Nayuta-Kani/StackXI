@@ -525,7 +525,7 @@ static void fakeNotifications() {
 
               CGRect newCollapse = self.sxiCollapseButton.frame;
               newCollapse.origin.y = self.view.frame.origin.y + self.view.frame.size.height - 27;
-              self.sxiCollapseButton = newCollapse;
+              self.sxiCollapseButton.frame = newCollapse;
               self.sxiCollapseButton = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.origin.x + self.view.frame.size.width - 75, self.view.frame.origin.y + self.view.frame.size.height - 27, 75, 25)];
               [self.sxiCollapseButton.titleLabel setFont:[UIFont systemFontOfSize:12]];
               self.sxiCollapseButton.hidden = YES;
