@@ -506,9 +506,9 @@ static void fakeNotifications() {
             self.sxiCollapseButton.layer.masksToBounds = true;
             self.sxiCollapseButton.layer.cornerRadius = 12.5;
             if(labelType == kBottom){
-              CGRect newClearAll = self.sxiClearAllButton.frame
+              CGRect newClearAll = self.sxiClearAllButton.frame;
               newClearAll.origin.y = self.view.frame.origin.y + self.view.frame.size.height - 27;
-              self.sxiClearAllButton.frame = newClearAll
+              self.sxiClearAllButton.frame = newClearAll;
               [self.sxiClearAllButton.titleLabel setFont:[UIFont systemFontOfSize:12]];
               self.sxiClearAllButton.hidden = YES;
               self.sxiClearAllButton.alpha = 0.0;
@@ -523,9 +523,9 @@ static void fakeNotifications() {
               self.sxiClearAllButton.layer.masksToBounds = true;
               self.sxiClearAllButton.layer.cornerRadius = 12.5;
 
-              CGRect newCollapse = self.sxiCollapseButton.frame
+              CGRect newCollapse = self.sxiCollapseButton.frame;
               newCollapse.origin.y = self.view.frame.origin.y + self.view.frame.size.height - 27;
-              self.sxiCollapseButton = newCollapse
+              self.sxiCollapseButton = newCollapse;
               self.sxiCollapseButton = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.origin.x + self.view.frame.size.width - 75, self.view.frame.origin.y + self.view.frame.size.height - 27, 75, 25)];
               [self.sxiCollapseButton.titleLabel setFont:[UIFont systemFontOfSize:12]];
               self.sxiCollapseButton.hidden = YES;
