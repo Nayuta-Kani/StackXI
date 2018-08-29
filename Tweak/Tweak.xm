@@ -16,7 +16,7 @@ static NCNotificationPriorityList *priorityList = nil;
 static NCNotificationListCollectionView *listCollectionView = nil;
 static NCNotificationCombinedListViewController *clvc = nil;
 static bool showButtons = false;
-static buttonLabelType labelType = kTop;
+static buttonLabelType labelType = kBottom;
 
 UIImage * imageWithView(UIView *view) {
     UIGraphicsBeginImageContextWithOptions(view.bounds.size, view.opaque, 0.0);
@@ -518,7 +518,7 @@ static void fakeNotifications() {
                 [self.sxiClearAllButton setTitleColor:[[UIColor whiteColor] colorWithAlphaComponent:0.7] forState:UIControlStateNormal];
               //}
               //else if(![[NoctisSystemController] sharedInstance] enabled]){
-                [self.sxiClearAllButton setTitleColor:[[UIColor blackColor] colorWithAlphaComponent:0.7] forState:UIControlStateNormal];
+              //  [self.sxiClearAllButton setTitleColor:[[UIColor blackColor] colorWithAlphaComponent:0.7] forState:UIControlStateNormal];
               //}
               self.sxiClearAllButton.layer.masksToBounds = true;
               self.sxiClearAllButton.layer.cornerRadius = 12.5;
@@ -771,7 +771,7 @@ static void displayStatusChanged(CFNotificationCenterRef center, void *observer,
     HBPreferences *file = [[HBPreferences alloc] initWithIdentifier:@"io.ominousness.stackxi"];
     bool enabled = [([file objectForKey:@"Enabled"] ?: @(YES)) boolValue];
     showButtons = [([file objectForKey:@"ShowButtons"] ?: @(NO)) boolValue];
-    labelType = [file objectForKey:@"labelType"] ? (buttonLabelType)[[file objectForKey:@"labelType"] intValue] : kTop;
+    labelType = [file objectForKey:@"labelType"] ? (buttonLabelType)[[file objectForKey:@"labelType"] intValue] : kBottom;
     bool debug = [([file objectForKey:@"debugmode"] ?: @(NO)) boolValue];;
 
     if (enabled) {
