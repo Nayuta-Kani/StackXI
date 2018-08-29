@@ -462,7 +462,7 @@ static void fakeNotifications() {
 }
 
 %new
-%c(NoctisSystemController)
+%c(NoctisSystemController);
 -(void)sxiUpdateCount {
     if (!self.sxiNotificationCount) {
         self.sxiNotificationCount = [[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.origin.x + 11, self.view.frame.origin.y + self.view.frame.size.height, self.view.frame.size.width - 21, 25)];
