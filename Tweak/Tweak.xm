@@ -462,6 +462,7 @@ static void fakeNotifications() {
 }
 
 %new
+%c(NoctisSystemController)
 -(void)sxiUpdateCount {
     if (!self.sxiNotificationCount) {
         self.sxiNotificationCount = [[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.origin.x + 11, self.view.frame.origin.y + self.view.frame.size.height, self.view.frame.size.width - 21, 25)];
@@ -480,14 +481,14 @@ static void fakeNotifications() {
               self.sxiClearAllButton.hidden = YES;
               self.sxiClearAllButton.alpha = 0.0;
               [self.sxiClearAllButton setTitle:@"Clear All" forState: UIControlStateNormal];
-              //if([[NoctisSystemController] sharedInstance] enabled]){
+              if([[NoctisSystemController] sharedInstance] enabled]){
                 self.sxiClearAllButton.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.6];
                 [self.sxiClearAllButton setTitleColor:[[UIColor whiteColor] colorWithAlphaComponent:0.7] forState:UIControlStateNormal];
-              //}
-              //else if(![[NoctisSystemController] sharedInstance] enabled]){
-              //  self.sxiClearAllButton.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.6];
-              //  [self.sxiClearAllButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-              //}
+              }
+              else if(![[NoctisSystemController] sharedInstance] enabled]){
+                self.sxiClearAllButton.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.6];
+                [self.sxiClearAllButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+              }
               self.sxiClearAllButton.layer.masksToBounds = true;
               self.sxiClearAllButton.layer.cornerRadius = 12.5;
 
@@ -496,14 +497,14 @@ static void fakeNotifications() {
               self.sxiCollapseButton.hidden = YES;
               self.sxiCollapseButton.alpha = 0.0;
               [self.sxiCollapseButton setTitle:@"Collapse" forState:UIControlStateNormal];
-              //if([[NoctisSystemController] sharedInstance] enabled]){
+              if([[NoctisSystemController] sharedInstance] enabled]){
                 self.sxiCollapseButton.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.6];
                 [self.sxiCollapseButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-              //}
-              //else if(![[NoctisSystemController] sharedInstance] enabled]){
-              //  self.sxiClearAllButton.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.6];
-              //  [self.sxiClearAllButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-              //}
+              }
+              else if(![[NoctisSystemController] sharedInstance] enabled]){
+                self.sxiClearAllButton.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.6];
+                [self.sxiClearAllButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+              }
               self.sxiCollapseButton.layer.masksToBounds = true;
               self.sxiCollapseButton.layer.cornerRadius = 12.5;
             }
@@ -514,12 +515,12 @@ static void fakeNotifications() {
               self.sxiClearAllButton.alpha = 0.0;
               [self.sxiClearAllButton setTitle:@"Clear All" forState: UIControlStateNormal];
               self.sxiClearAllButton.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.0];
-              //if([[NoctisSystemController] sharedInstance] enabled]){
+              if([[NoctisSystemController] sharedInstance] enabled]){
                 [self.sxiClearAllButton setTitleColor:[[UIColor whiteColor] colorWithAlphaComponent:0.7] forState:UIControlStateNormal];
-              //}
-              //else if(![[NoctisSystemController] sharedInstance] enabled]){
-              //  [self.sxiClearAllButton setTitleColor:[[UIColor blackColor] colorWithAlphaComponent:0.7] forState:UIControlStateNormal];
-              //}
+              }
+              else if(![[NoctisSystemController] sharedInstance] enabled]){
+                [self.sxiClearAllButton setTitleColor:[[UIColor blackColor] colorWithAlphaComponent:0.7] forState:UIControlStateNormal];
+              }
               self.sxiClearAllButton.layer.masksToBounds = true;
               self.sxiClearAllButton.layer.cornerRadius = 12.5;
 
@@ -529,12 +530,12 @@ static void fakeNotifications() {
               self.sxiCollapseButton.alpha = 0.0;
               [self.sxiCollapseButton setTitle:@"Collapse" forState:UIControlStateNormal];
               self.sxiCollapseButton.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.0];
-              //if([[NoctisSystemController] sharedInstance] enabled]){
-              //  [self.sxiCollapseButton setTitleColor:[[UIColor whiteColor] colorWithAlphaComponent:0.7] forState:UIControlStateNormal];
-              //}
-              //else if(![[NoctisSystemController] sharedInstance] enabled]){
-              //  [self.sxiCollapseButton setTitleColor:[[UIColor blackColor] colorWithAlphaComponent:0.7] forState:UIControlStateNormal];
-              //}
+              if([[NoctisSystemController] sharedInstance] enabled]){
+                [self.sxiCollapseButton setTitleColor:[[UIColor whiteColor] colorWithAlphaComponent:0.7] forState:UIControlStateNormal];
+              }
+              else if(![[NoctisSystemController] sharedInstance] enabled]){
+                [self.sxiCollapseButton setTitleColor:[[UIColor blackColor] colorWithAlphaComponent:0.7] forState:UIControlStateNormal];
+              }
               self.sxiCollapseButton.layer.masksToBounds = true;
               self.sxiCollapseButton.layer.cornerRadius = 12.5;
             }

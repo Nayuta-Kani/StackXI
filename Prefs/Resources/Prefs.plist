@@ -72,6 +72,16 @@
 			<key>defaults</key>
 			<string>io.ominousness.stackxi</string>
 		</dict>
+
+		<!-- Credits -->
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>StackXI by Ominousness. Currently being destroyed by Nayu's skrubby programming.</string>
+			<key>isStaticText</key>
+			<true/>
+		</dict>
 		<dict>
 			<key>cell</key>
 			<string>PSSwitchCell</string>
@@ -84,16 +94,6 @@
 			<key>key</key>
 			<string>debugmode</string>
 			<key>alternateColors</key>
-			<true/>
-		</dict>
-
-		<!-- Credits -->
-		<dict>
-			<key>cell</key>
-			<string>PSGroupCell</string>
-			<key>footerText</key>
-			<string>StackXI by Ominousness. Currently being destroyed by Nayu's skrubby programming.</string>
-			<key>isStaticText</key>
 			<true/>
 		</dict>
 		<dict>
