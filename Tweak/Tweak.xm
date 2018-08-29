@@ -16,7 +16,6 @@ static NCNotificationPriorityList *priorityList = nil;
 static NCNotificationListCollectionView *listCollectionView = nil;
 static NCNotificationCombinedListViewController *clvc = nil;
 static bool showButtons = false;
-static bool buttonTextColor = false;
 static buttonLabelType labelType = kTop;
 
 UIImage * imageWithView(UIView *view) {
