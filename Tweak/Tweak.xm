@@ -771,7 +771,7 @@ static void displayStatusChanged(CFNotificationCenterRef center, void *observer,
     HBPreferences *file = [[HBPreferences alloc] initWithIdentifier:@"io.ominousness.stackxi"];
     bool enabled = [([file objectForKey:@"Enabled"] ?: @(YES)) boolValue];
     showButtons = [([file objectForKey:@"ShowButtons"] ?: @(NO)) boolValue];
-    labelType = [file objectForKey:@"labelType"] ? (buttonLabelType)[[file objectForKey:@"labelType"] intValue] : kTop;
+    labelType = [file objectForKey:@"labelType"] ? (buttonLabelType)[[file objectForKey:@"labelType"] intValue];
     bool debug = [([file objectForKey:@"debugmode"] ?: @(NO)) boolValue];;
 
     if (enabled) {
