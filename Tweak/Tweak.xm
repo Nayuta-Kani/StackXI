@@ -462,7 +462,7 @@ static void fakeNotifications() {
 }
 
 %new
-%c(NoctisSystemController);
+
 -(void)sxiUpdateCount {
     if (!self.sxiNotificationCount) {
         self.sxiNotificationCount = [[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.origin.x + 11, self.view.frame.origin.y + self.view.frame.size.height, self.view.frame.size.width - 21, 25)];
@@ -475,6 +475,7 @@ static void fakeNotifications() {
         [self.view addSubview:self.sxiNotificationCount];
 
         if (showButtons) {
+            %c(NoctisSystemController);
             if(labelType == kTop){
               self.sxiClearAllButton = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.origin.x + self.view.frame.size.width - 165, self.view.frame.origin.y + 5, 75, 25)];
               [self.sxiClearAllButton.titleLabel setFont:[UIFont systemFontOfSize:12]];
