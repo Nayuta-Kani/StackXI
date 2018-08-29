@@ -42,17 +42,35 @@
 		</dict>
 		<dict>
 			<key>cell</key>
-			<string>PSSwitchCell</string>
+			<string>PSGroupCell</string>
+			<key>id</key>
+			<string>Type</string>
+			<key>label</key>
+			<string>Label Style</string>
+			<key>footerText</key>
+			<string>On top: At top right of notifications (Will block date) &#xA;Below: At bottom right of notifications</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSegmentCell</string>
+			<key>id</key>
+			<string>buttonLabelType</string>
+			<key>key</key>
+			<string>labelType</string>
+			<key>validTitles</key>
+			<array>
+				<string>On top</string>
+				<string>Below</string>
+			</array>
+			<key>validValues</key>
+			<array>
+				<integer>0</integer>
+				<integer>1</integer>
+			</array>
 			<key>default</key>
-			<false/>
+			<integer>0</integer>
 			<key>defaults</key>
 			<string>io.ominousness.stackxi</string>
-			<key>label</key>
-			<string>Black Text color for buttons</string>
-			<key>key</key>
-			<string>buttonTextColor</string>
-			<key>alternateColors</key>
-			<true/>
 		</dict>
 		<dict>
 			<key>cell</key>
