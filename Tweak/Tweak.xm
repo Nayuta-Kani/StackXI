@@ -474,41 +474,41 @@ static void fakeNotifications() {
         [self.view addSubview:self.sxiNotificationCount];
 
         if (showButtons) {
-            self.sxiClearAllButton = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.origin.x + self.view.frame.size.width - 165, self.view.frame.origin.y + 5, 75, 25)];
-            [self.sxiClearAllButton.titleLabel setFont:[UIFont systemFontOfSize:12]];
-            self.sxiClearAllButton.hidden = YES;
-            self.sxiClearAllButton.alpha = 0.0;
-            [self.sxiClearAllButton setTitle:@"Clear All" forState: UIControlStateNormal];
-            //if([[NoctisSystemController] sharedInstance] enabled]){
-              self.sxiClearAllButton.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.6];
-              [self.sxiClearAllButton setTitleColor:[[UIColor blackColor] colorWithAlphaComponent:0.7] forState:UIControlStateNormal];
-            //}
-            //else if(![[NoctisSystemController] sharedInstance] enabled]){
-            //  self.sxiClearAllButton.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.6];
-            //  [self.sxiClearAllButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-            //}
-            self.sxiClearAllButton.layer.masksToBounds = true;
-            self.sxiClearAllButton.layer.cornerRadius = 12.5;
+            if(labelType == kTop){
+              self.sxiClearAllButton = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.origin.x + self.view.frame.size.width - 165, self.view.frame.origin.y + 5, 75, 25)];
+              [self.sxiClearAllButton.titleLabel setFont:[UIFont systemFontOfSize:12]];
+              self.sxiClearAllButton.hidden = YES;
+              self.sxiClearAllButton.alpha = 0.0;
+              [self.sxiClearAllButton setTitle:@"Clear All" forState: UIControlStateNormal];
+              //if([[NoctisSystemController] sharedInstance] enabled]){
+                self.sxiClearAllButton.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.6];
+                [self.sxiClearAllButton setTitleColor:[[UIColor whiteColor] colorWithAlphaComponent:0.7] forState:UIControlStateNormal];
+              //}
+              //else if(![[NoctisSystemController] sharedInstance] enabled]){
+              //  self.sxiClearAllButton.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.6];
+              //  [self.sxiClearAllButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+              //}
+              self.sxiClearAllButton.layer.masksToBounds = true;
+              self.sxiClearAllButton.layer.cornerRadius = 12.5;
 
-            self.sxiCollapseButton = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.origin.x + self.view.frame.size.width - 80, self.view.frame.origin.y + 5, 75, 25)];
-            [self.sxiCollapseButton.titleLabel setFont:[UIFont systemFontOfSize:12]];
-            self.sxiCollapseButton.hidden = YES;
-            self.sxiCollapseButton.alpha = 0.0;
-            [self.sxiCollapseButton setTitle:@"Collapse" forState:UIControlStateNormal];
-            //if([[NoctisSystemController] sharedInstance] enabled]){
-              self.sxiCollapseButton.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.6];
-              [self.sxiCollapseButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-            //}
-            //else if(![[NoctisSystemController] sharedInstance] enabled]){
-            //  self.sxiClearAllButton.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.6];
-            //  [self.sxiClearAllButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-            //}
-            self.sxiCollapseButton.layer.masksToBounds = true;
-            self.sxiCollapseButton.layer.cornerRadius = 12.5;
-            if(labelType == kBottom){
-              CGRect newClearAll = self.sxiClearAllButton.frame;
-              newClearAll.origin.y = self.view.frame.origin.y + self.view.frame.size.height - 27;
-              self.sxiClearAllButton.frame = newClearAll;
+              self.sxiCollapseButton = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.origin.x + self.view.frame.size.width - 80, self.view.frame.origin.y + 5, 75, 25)];
+              [self.sxiCollapseButton.titleLabel setFont:[UIFont systemFontOfSize:12]];
+              self.sxiCollapseButton.hidden = YES;
+              self.sxiCollapseButton.alpha = 0.0;
+              [self.sxiCollapseButton setTitle:@"Collapse" forState:UIControlStateNormal];
+              //if([[NoctisSystemController] sharedInstance] enabled]){
+                self.sxiCollapseButton.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.6];
+                [self.sxiCollapseButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+              //}
+              //else if(![[NoctisSystemController] sharedInstance] enabled]){
+              //  self.sxiClearAllButton.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.6];
+              //  [self.sxiClearAllButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+              //}
+              self.sxiCollapseButton.layer.masksToBounds = true;
+              self.sxiCollapseButton.layer.cornerRadius = 12.5;
+            }
+            else if(labelType == kBottom){
+              self.sxiClearAllButton = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.origin.x + self.view.frame.size.width - 150, self.view.frame.origin.y + self.view.frame.size.height - 27, 75, 25)];
               [self.sxiClearAllButton.titleLabel setFont:[UIFont systemFontOfSize:12]];
               self.sxiClearAllButton.hidden = YES;
               self.sxiClearAllButton.alpha = 0.0;
@@ -523,9 +523,6 @@ static void fakeNotifications() {
               self.sxiClearAllButton.layer.masksToBounds = true;
               self.sxiClearAllButton.layer.cornerRadius = 12.5;
 
-              CGRect newCollapse = self.sxiCollapseButton.frame;
-              newCollapse.origin.y = self.view.frame.origin.y + self.view.frame.size.height - 27;
-              self.sxiCollapseButton.frame = newCollapse;
               self.sxiCollapseButton = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.origin.x + self.view.frame.size.width - 75, self.view.frame.origin.y + self.view.frame.size.height - 27, 75, 25)];
               [self.sxiCollapseButton.titleLabel setFont:[UIFont systemFontOfSize:12]];
               self.sxiCollapseButton.hidden = YES;
@@ -533,7 +530,7 @@ static void fakeNotifications() {
               [self.sxiCollapseButton setTitle:@"Collapse" forState:UIControlStateNormal];
               self.sxiCollapseButton.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.0];
               //if([[NoctisSystemController] sharedInstance] enabled]){
-                [self.sxiCollapseButton setTitleColor:[[UIColor whiteColor] colorWithAlphaComponent:0.7] forState:UIControlStateNormal];
+              //  [self.sxiCollapseButton setTitleColor:[[UIColor whiteColor] colorWithAlphaComponent:0.7] forState:UIControlStateNormal];
               //}
               //else if(![[NoctisSystemController] sharedInstance] enabled]){
               //  [self.sxiCollapseButton setTitleColor:[[UIColor blackColor] colorWithAlphaComponent:0.7] forState:UIControlStateNormal];
@@ -576,8 +573,14 @@ static void fakeNotifications() {
     self.sxiNotificationCount.alpha = 0.0;
 
     if (showButtons) {
-        self.sxiClearAllButton.frame = CGRectMake(self.view.frame.origin.x + self.view.frame.size.width - 150, self.view.frame.origin.y + self.view.frame.size.height - 27, 75, 25);
-        self.sxiCollapseButton.frame = CGRectMake(self.view.frame.origin.x + self.view.frame.size.width - 75, self.view.frame.origin.y + self.view.frame.size.height - 27, 75, 25);
+        if(labelType == kTop){
+          self.sxiClearAllButton.frame = CGRectMake(self.view.frame.origin.x + self.view.frame.size.width - 165, self.view.frame.origin.y + 5, 75, 25);
+          self.sxiCollapseButton.frame = CGRectMake(self.view.frame.origin.x + self.view.frame.size.width - 80, self.view.frame.origin.y + 5, 75, 25);
+        }
+        else if(labelType == kBottom){
+          self.sxiClearAllButton.frame = CGRectMake(self.view.frame.origin.x + self.view.frame.size.width - 150, self.view.frame.origin.y + self.view.frame.size.height - 27, 75, 25);
+          self.sxiCollapseButton.frame = CGRectMake(self.view.frame.origin.x + self.view.frame.size.width - 75, self.view.frame.origin.y + self.view.frame.size.height - 27, 75, 25);
+        }
 
         self.sxiClearAllButton.hidden = YES;
         self.sxiClearAllButton.alpha = 0.0;
