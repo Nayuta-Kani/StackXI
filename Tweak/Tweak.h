@@ -750,7 +750,3 @@
 -(id)initialLayoutAttributesForAppearingItemAtIndexPath:(id)arg1;
 
 @end
-
-@interface NoctisSystemController : UIView
--(bool)enabled;
-@end
