@@ -751,6 +751,6 @@
 
 @end
 
-@interface NoctisSystemController
+@interface NoctisSystemController : UIView
 -(bool)enabled;
 @end
