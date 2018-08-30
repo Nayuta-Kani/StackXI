@@ -752,4 +752,5 @@
 @end
 
 @interface NoctisSystemController
+-(bool)enabled;
 @end
