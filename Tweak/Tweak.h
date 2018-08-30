@@ -752,4 +752,5 @@
 @end
 
 @interface NoctisSystemController : UIView
++(id)sharedInstance
 @end
