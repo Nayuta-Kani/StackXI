@@ -45,14 +45,14 @@
 
 }
 
-//@property (nonatomic,readonly) <MTMaterialSettings><MTMaterialSettingsObservable>* materialSettings; 
-//@property (nonatomic,__weak,readonly) MTVibrantStylingProvider* vibrantStylingProvider; 
-@property (assign,getter=isHighlighted,nonatomic) bool highlighted; 
-@property (assign,nonatomic) bool allowsInPlaceFiltering; 
-@property (nonatomic,copy) id backdropScaleAdjustment; 
-@property (assign,nonatomic) bool shouldCrossfadeIfNecessary; 
-@property (assign,nonatomic) bool forceCrossfadeIfNecessary; 
-@property (assign,nonatomic) double weighting;    
+//@property (nonatomic,readonly) <MTMaterialSettings><MTMaterialSettingsObservable>* materialSettings;
+//@property (nonatomic,__weak,readonly) MTVibrantStylingProvider* vibrantStylingProvider;
+@property (assign,getter=isHighlighted,nonatomic) bool highlighted;
+@property (assign,nonatomic) bool allowsInPlaceFiltering;
+@property (nonatomic,copy) id backdropScaleAdjustment;
+@property (assign,nonatomic) bool shouldCrossfadeIfNecessary;
+@property (assign,nonatomic) bool forceCrossfadeIfNecessary;
+@property (assign,nonatomic) double weighting;
 +(void)initialize;
 +(id)materialViewWithRecipe:(long long)arg1 options:(unsigned long long)arg2 ;
 +(id)materialViewWithRecipe:(long long)arg1 options:(unsigned long long)arg2 initialWeighting:(double)arg3 scaleAdjustment:(/*^block*/ id)arg4 ;
@@ -118,9 +118,9 @@
 
 }
 
-@property (nonatomic,readonly) MTMaterialView* backgroundMaterialView; 
-@property (assign,nonatomic) double cornerRadius; 
-@property (assign,getter=isHighlighted,nonatomic) bool highlighted; 
+@property (nonatomic,readonly) MTMaterialView* backgroundMaterialView;
+@property (assign,nonatomic) double cornerRadius;
+@property (assign,getter=isHighlighted,nonatomic) bool highlighted;
 @property (assign,nonatomic) bool usesBackgroundView;                                     //@synthesize usesBackgroundView=_usesBackgroundView - In the implementation block
 @property (nonatomic,retain) UIView* backgroundView;                                      //@synthesize backgroundView=_backgroundView - In the implementation block
 @property (nonatomic,readonly) UIView* customContentView;                                 //@synthesize customContentView=_customContentView - In the implementation block
@@ -184,22 +184,22 @@
 
 }
 
-@property (getter=_titleLabel,nonatomic,readonly) UILabel* titleLabel; 
-@property (getter=_outgoingTitleLabel,nonatomic,readonly) UILabel* outgoingTitleLabel; 
-@property (getter=_dateLabel,nonatomic,readonly) UILabel* dateLabel; 
-@property (getter=_titleLabelFont,nonatomic,readonly) UIFont* titleLabelFont; 
-@property (getter=_dateLabelFont,nonatomic,readonly) UIFont* dateLabelFont; 
-@property (assign,setter=_setUsesLargeTextLayout:,getter=_usesLargeTextLayout,nonatomic) bool usesLargeTextLayout; 
-@property (nonatomic,retain) UIImage* icon; 
-@property (nonatomic,copy) NSString* title; 
+@property (getter=_titleLabel,nonatomic,readonly) UILabel* titleLabel;
+@property (getter=_outgoingTitleLabel,nonatomic,readonly) UILabel* outgoingTitleLabel;
+@property (getter=_dateLabel,nonatomic,readonly) UILabel* dateLabel;
+@property (getter=_titleLabelFont,nonatomic,readonly) UIFont* titleLabelFont;
+@property (getter=_dateLabelFont,nonatomic,readonly) UIFont* dateLabelFont;
+@property (assign,setter=_setUsesLargeTextLayout:,getter=_usesLargeTextLayout,nonatomic) bool usesLargeTextLayout;
+@property (nonatomic,retain) UIImage* icon;
+@property (nonatomic,copy) NSString* title;
 @property (nonatomic,copy) NSDate* date;                                                                                      //@synthesize date=_date - In the implementation block
 @property (assign,getter=isDateAllDay,nonatomic) bool dateAllDay;                                                             //@synthesize dateAllDay=_dateAllDay - In the implementation block
 @property (nonatomic,copy) NSTimeZone* timeZone;                                                                              //@synthesize timeZone=_timeZone - In the implementation block
 @property (nonatomic,readonly) UIButton* iconButton;                                                                          //@synthesize iconButton=_iconButton - In the implementation block
-@property (nonatomic,readonly) UIButton* utilityButton; 
+@property (nonatomic,readonly) UIButton* utilityButton;
 @property (nonatomic,retain) UIView* utilityView;                                                                             //@synthesize utilityView=_utilityView - In the implementation block
 @property (assign,nonatomic) bool heedsHorizontalLayoutMargins;                                                               //@synthesize heedsHorizontalLayoutMargins=_heedsHorizontalLayoutMargins - In the implementation block
-@property (nonatomic,readonly) double contentBaseline; 
+@property (nonatomic,readonly) double contentBaseline;
 @property (assign,nonatomic) bool adjustsFontForContentSizeCategory;                                                          //@synthesize adjustsFontForContentSizeCategory=_adjustsFontForContentSizeCategory - In the implementation block
 @property (nonatomic,copy) NSString* preferredContentSizeCategory;                                                            //@synthesize preferredContentSizeCategory=_preferredContentSizeCategory - In the implementation block
 -(id)init;
@@ -287,19 +287,19 @@
 
 }
 
-@property (assign,getter=isSashHidden,nonatomic) bool sashHidden;   
-@property (nonatomic,readonly) UIView* customContentView; 
-@property (assign,nonatomic) bool hasShadow; 
-@property (assign,getter=isBackgroundBlurred,nonatomic) bool backgroundBlurred; 
-@property (assign,nonatomic) bool adjustsFontForContentSizeCategory; 
-@property (nonatomic,copy) NSString* preferredContentSizeCategory; 
-@property (nonatomic,retain) UIImage* icon; 
-@property (nonatomic,copy) NSString* title; 
-@property (nonatomic,copy) NSDate* date; 
-@property (assign,getter=isDateAllDay,nonatomic) bool dateAllDay; 
-@property (nonatomic,copy) NSTimeZone* timeZone; 
-@property (nonatomic,readonly) UIButton* iconButton; 
-@property (nonatomic,readonly) UIButton* utilityButton; 
+@property (assign,getter=isSashHidden,nonatomic) bool sashHidden;
+@property (nonatomic,readonly) UIView* customContentView;
+@property (assign,nonatomic) bool hasShadow;
+@property (assign,getter=isBackgroundBlurred,nonatomic) bool backgroundBlurred;
+@property (assign,nonatomic) bool adjustsFontForContentSizeCategory;
+@property (nonatomic,copy) NSString* preferredContentSizeCategory;
+@property (nonatomic,retain) UIImage* icon;
+@property (nonatomic,copy) NSString* title;
+@property (nonatomic,copy) NSDate* date;
+@property (assign,getter=isDateAllDay,nonatomic) bool dateAllDay;
+@property (nonatomic,copy) NSTimeZone* timeZone;
+@property (nonatomic,readonly) UIButton* iconButton;
+@property (nonatomic,readonly) UIButton* utilityButton;
 -(void)setNeedsLayout;
 -(void)layoutSubviews;
 -(void)setTitle:(NSString*)arg1 ;
@@ -351,11 +351,11 @@
 
 //@property (assign,nonatomic,__weak) WGWidgetHostingViewController* widgetHost;                      //@synthesize widgetHost=_widgetHost - In the implementation block
 //@property (assign,nonatomic,__weak) WGWidgetListItemViewController* listItem;                       //@synthesize listItem=_listItem - In the implementation block
-@property (nonatomic,readonly) UIButton* showMoreButton; 
+@property (nonatomic,readonly) UIButton* showMoreButton;
 @property (assign,getter=isShowingMoreContent,nonatomic) bool showingMoreContent;                   //@synthesize showingMoreContent=_showingMoreContent - In the implementation block
-@property (assign,getter=isShowMoreButtonVisible,nonatomic) bool showMoreButtonVisible; 
-@property (nonatomic,readonly) UIButton* addWidgetButton; 
-@property (assign,getter=isAddWidgetButtonVisible,nonatomic) bool addWidgetButtonVisible; 
+@property (assign,getter=isShowMoreButtonVisible,nonatomic) bool showMoreButtonVisible;
+@property (nonatomic,readonly) UIButton* addWidgetButton;
+@property (assign,getter=isAddWidgetButtonVisible,nonatomic) bool addWidgetButtonVisible;
 -(id)initWithFrame:(CGRect)arg1 ;
 -(void)layoutSubviews;
 -(CGSize)sizeThatFits:(CGSize)arg1 ;
@@ -410,13 +410,13 @@
 }
 
 @property (setter=_setPrimaryLabel:,getter=_primaryLabel,nonatomic,retain) UILabel * primaryLabel;
-@property (nonatomic,retain) NSString * primaryText; 
-@property (nonatomic,retain) NSString * primarySubtitleText; 
-@property (nonatomic,retain) NSString * secondaryText; 
-@property (nonatomic,retain) UIImage * thumbnail; 
+@property (nonatomic,retain) NSString * primaryText;
+@property (nonatomic,retain) NSString * primarySubtitleText;
+@property (nonatomic,retain) NSString * secondaryText;
+@property (nonatomic,retain) UIImage * thumbnail;
 @property (nonatomic,retain) UIView * accessoryView;                                                                                                            //@synthesize accessoryView=_accessoryView - In the implementation block
-@property (assign,nonatomic) unsigned long long messageNumberOfLines; 
-@property (readonly) unsigned long long hash; 
+@property (assign,nonatomic) unsigned long long messageNumberOfLines;
+@property (readonly) unsigned long long hash;
 @property (assign,nonatomic) BOOL adjustsFontForContentSizeCategory;                                                                                            //@synthesize adjustsFontForContentSizeCategory=_adjustsFontForContentSizeCategory - In the implementation block
 @property (nonatomic,copy) NSString * preferredContentSizeCategory;                                                                                             //@synthesize preferredContentSizeCategory=_preferredContentSizeCategory - In the implementation block
 -(void)layoutSubviews;
@@ -523,17 +523,17 @@
 
 }
 
-@property (nonatomic,retain) UIImage * icon; 
-@property (nonatomic,copy) NSString * title; 
-@property (nonatomic,copy) NSDate * date; 
-@property (nonatomic,copy) NSTimeZone * timeZone; 
-@property (nonatomic,copy) NSString * primaryText; 
-@property (nonatomic,copy) NSString * primarySubtitleText; 
-@property (nonatomic,copy) NSString * secondaryText; 
-@property (nonatomic,retain) NSArray * interfaceActions; 
-@property (nonatomic,retain) UIImage * thumbnail; 
-@property (nonatomic,retain) UIView * accessoryView; 
-@property (assign,nonatomic) unsigned long long messageNumberOfLines; 
+@property (nonatomic,retain) UIImage * icon;
+@property (nonatomic,copy) NSString * title;
+@property (nonatomic,copy) NSDate * date;
+@property (nonatomic,copy) NSTimeZone * timeZone;
+@property (nonatomic,copy) NSString * primaryText;
+@property (nonatomic,copy) NSString * primarySubtitleText;
+@property (nonatomic,copy) NSString * secondaryText;
+@property (nonatomic,retain) NSArray * interfaceActions;
+@property (nonatomic,retain) UIImage * thumbnail;
+@property (nonatomic,retain) UIView * accessoryView;
+@property (assign,nonatomic) unsigned long long messageNumberOfLines;
 -(id)init;
 -(id)initWithFrame:(CGRect)arg1 ;
 -(void)layoutSubviews;
@@ -593,7 +593,7 @@
 
 
 @interface NCNotificationAction : NSObject
-@property (nonatomic,readonly) NCNotificationActionRunner *actionRunner;   
+@property (nonatomic,readonly) NCNotificationActionRunner *actionRunner;
 @end
 
 @interface NCNotificationRequest : NSObject
@@ -604,7 +604,7 @@
 @property (assign,nonatomic) bool sxiVisible;
 @property (assign,nonatomic) NSUInteger sxiPositionInStack;
 @property (nonatomic,retain) NSMutableOrderedSet *sxiStackedNotificationRequests;
-@property (nonatomic,readonly) NCNotificationAction* clearAction; 
+@property (nonatomic,readonly) NCNotificationAction* clearAction;
 
 -(void)sxiInsertRequest:(NCNotificationRequest *)request;
 -(void)sxiExpand;
@@ -612,9 +612,9 @@
 
 @end
 
-@interface NCNotificationViewController : UIViewController 
+@interface NCNotificationViewController : UIViewController
 
-@property (nonatomic,retain) NCNotificationRequest* notificationRequest;          
+@property (nonatomic,retain) NCNotificationRequest* notificationRequest;
 
 @end
 
@@ -664,7 +664,7 @@
 @interface NCNotificationPriorityList : NSObject
 
 @property (nonatomic,retain) NSMutableOrderedSet* requests;           //@synthesize requests=_requests - In the implementation block
-@property (nonatomic,readonly) unsigned long long count; 
+@property (nonatomic,readonly) unsigned long long count;
 -(NSMutableOrderedSet*)requests;
 -(id)requestAtIndex:(unsigned long long)arg1 ;
 -(void)setRequests:(NSMutableOrderedSet*)arg1 ;
@@ -702,7 +702,7 @@
 
 @interface NCNotificationListCellActionButton : UIControl
 @property (nonatomic,retain) UILabel* titleLabel;
-@property (nonatomic,copy) NSString* title; 
+@property (nonatomic,copy) NSString* title;
 -(void)setTitle:(NSString *)arg1 ;
 
 @end
@@ -713,7 +713,7 @@
 
 @interface NCNotificationListCell : UICollectionViewCell
 
-@property (nonatomic,retain) NCNotificationViewController* contentViewController;  
+@property (nonatomic,retain) NCNotificationViewController* contentViewController;
 @property (nonatomic,retain) NCNotificationListCellActionButtonsView* rightActionButtonsView;
 
 -(instancetype)init;
@@ -749,4 +749,8 @@
 
 -(id)initialLayoutAttributesForAppearingItemAtIndexPath:(id)arg1;
 
+@end
+
+@interface NoctisSystemController : UIView
+-(bool)enabled;
 @end

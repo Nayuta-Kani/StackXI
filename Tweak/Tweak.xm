@@ -1,5 +1,4 @@
 #import "Tweak.h"
-#import "NoctisSystemController.h"
 
 
 #define TEMPWIDTH 0
@@ -476,7 +475,6 @@ static void fakeNotifications() {
         [self.view addSubview:self.sxiNotificationCount];
 
         if (showButtons) {
-            %c(+NoctisSystemController);
             if(labelType == kTop){
               self.sxiClearAllButton = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.origin.x + self.view.frame.size.width - 165, self.view.frame.origin.y + 5, 75, 25)];
               [self.sxiClearAllButton.titleLabel setFont:[UIFont systemFontOfSize:12]];
