@@ -1,5 +1,5 @@
 #import "Tweak.h"
-
+#import "DebugLog.h"
 
 #define TEMPWIDTH 0
 #define TEMPDURATION 0.4
