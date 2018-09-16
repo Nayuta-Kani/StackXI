@@ -5,7 +5,8 @@
 #import <BulletinBoard/BBDataProvider.h>
 #import <BulletinBoard/BBBulletin.h>
 #import <BulletinBoard/BBAction.h>
-
+#define kNoctisAppID 			CFSTR("com.laughingquoll.noctis")
+#define kNoctisEnabledKey 		CFSTR("LQDDarkModeEnabled")
 @interface _UIBackdropView : UIView {
 	int  _style;
 }
