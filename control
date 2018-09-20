@@ -4,6 +4,6 @@ Depends: mobilesubstrate, ws.hbang.common (>= 1.11)
 Version: 0.2.1~nayu
 Architecture: iphoneos-arm
 Description: Grouped notifications, iOS 12 style.
-Maintainer: Ominousness, Nayu
-Author: Ominousness, Nayu
+Maintainer: Ominousness
+Author: Ominousness
 Section: Tweaks
