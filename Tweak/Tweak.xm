@@ -161,12 +161,12 @@ static void fakeNotifications() {
 
 
 %hook NCNotificationSectionList
-
+/*
 -(id)removeNotificationRequest:(id)arg1 {
     [priorityList removeNotificationRequest:(NCNotificationRequest *)arg1];
     return nil;
 }
-
+*/
 -(id)insertNotificationRequest:(id)arg1 {
     [priorityList insertNotificationRequest:(NCNotificationRequest *)arg1];
     return nil;
@@ -175,7 +175,7 @@ static void fakeNotifications() {
 -(NSUInteger)sectionCount {
     return 0;
 }
-/*
+
 -(NSUInteger)rowCountForSectionIndex:(NSUInteger)arg1 {
     return 0;
 }
@@ -187,7 +187,7 @@ static void fakeNotifications() {
 -(id)notificationRequestsAtIndexPaths:(id)arg1 {
     return nil;
 }
-*/
+
 %end
 
 %hook NCNotificationChronologicalList
@@ -307,12 +307,12 @@ static void fakeNotifications() {
     //so i had to disable this
     return nil;
 }
-
+/*
 -(id)clearAllRequests {
     //not sure if i want this working too :D
     return nil;
 }
-
+*/
 %end
 
 %hook NCNotificationCombinedListViewController
