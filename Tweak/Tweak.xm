@@ -175,7 +175,7 @@ static void fakeNotifications() {
 -(NSUInteger)sectionCount {
     return 0;
 }
-
+/*
 -(NSUInteger)rowCountForSectionIndex:(NSUInteger)arg1 {
     return 0;
 }
@@ -187,7 +187,7 @@ static void fakeNotifications() {
 -(id)notificationRequestsAtIndexPaths:(id)arg1 {
     return nil;
 }
-
+*/
 %end
 
 %hook NCNotificationChronologicalList
